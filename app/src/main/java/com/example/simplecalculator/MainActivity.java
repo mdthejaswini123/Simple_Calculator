@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         b1=(Button) findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener() {
+            //this part of code is to redirect to next page
             @Override
             public void onClick(View view) {
                 Intent conn = new

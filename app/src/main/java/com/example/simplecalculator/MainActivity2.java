@@ -25,6 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
+        //to initailise the variables
         num1 = (EditText) findViewById(R.id.num1);
         num2 = (EditText) findViewById(R.id.num2);
         add = (Button) findViewById(R.id.add);
@@ -40,12 +41,14 @@ public class MainActivity2 extends AppCompatActivity {
         DivRes=(TextView)findViewById(R.id.divRes);
         ModRes=(TextView)findViewById(R.id.modRes);
         back=(Button) findViewById(R.id.back);
+        //adding function to "add" button to perform addition
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String n1,n2;
                 n1=num1.getText().toString();
                 n2=num2.getText().toString();
+                //if the two or any one number is not entered and tried to perform operation it'll show an alter to enter both the numbers
                 if (n1.isEmpty()|| n2.isEmpty()) {
                     Toast.makeText(MainActivity2.this,"Please enter the two numbers",Toast.LENGTH_SHORT).show();
                     return;
@@ -112,6 +115,7 @@ public class MainActivity2 extends AppCompatActivity {
                 ModRes.setText(String.valueOf(Res5));
             }
         });
+        //this is to perform all the operations by clicking single button of id="allOps"
         allOps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -146,6 +150,7 @@ public class MainActivity2 extends AppCompatActivity {
                 ModRes.setText("");
             }
         });
+        //this part of code is to redirect to home the home page
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
